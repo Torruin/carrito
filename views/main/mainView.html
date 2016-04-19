@@ -1,0 +1,74 @@
+<div class="well container-fluid">
+        <div class="row-fluid">
+            <div class="span2 row">
+            <h1>{{titulo}}</h1>
+               <p id="carta"> Carta</p>
+                <div class="well span1" ng-repeat="producto in todos.productos">
+                    <h4>{{producto.nombre}}</h4>
+                    <img id="producto" class="" title="{{producto.nombre}}" 
+                    src="images/{{producto.img}}.png" />
+                    <select ng-init="producto.clase='Pequeña'" ng-model="producto.clase">
+                        <option value="Pequeña">Pequeña</option>
+                        <option value="Mediana">Mediana</option>
+                        <option value="Familiar">Familiar</option>
+                    </select>
+                    <div class="btn-group">
+                    <button class="btn btn-info btn-block" ng-click="agregar(producto, producto.clase)"> 
+                        <i class="glyphicon-plus"></i>
+                        Precio: {{formatoMoneda(todos.precios[producto.precio], producto.clase) | currency:'€'}}
+                    </button>
+                    <button class="btn btn-info btn-block" ng-click="borrar(producto)"> 
+                        <i class="glyphicon-minus"></i>
+                        Precio: {{formatoMoneda(todos.precios[producto.precio], producto.clase) | currency:'€'}}
+                    </button>
+                    
+                </div>
+                </div>
+            </div>
+            <br/>
+            <div id="carrito" class="pull-right span5 panel panel-default">
+                <div class = "panel-heading">
+                    <h4>Carrito
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </h4>
+                </div>
+        
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="span2">Producto</th>
+                            <th class="span2">Pequeñas</th>
+                            <th class="span2">Medianas</th>
+                            <th class="span2">Familiares</th>
+                            <th class="span2">Precio</th>
+                            <th class="span2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="well" ng-repeat="item in carrito">
+
+                            <td>{{item.Producto.nombre}}</td>
+                            <td>
+                                <input type="text" ng-model="item.CantidadP" />
+                            </td>
+                            <td>
+                                <input type="text" ng-model="item.CantidadM" />
+                            </td>
+                            <td>
+                                <input type="text" ng-model="item.CantidadF" />
+                            </td>
+                            <td>{{ calculoParcial(item.CantidadP * todos.precios[item.Producto.precio], item.CantidadM * todos.precios[item.Producto.precio],item.CantidadF * todos.precios[item.Producto.precio]) | currency:'€' }}</td>
+                            <td><button class="btn btn-info btn-block" ng-click="eliminar(item.Producto)"> 
+                        <i class="icon-minus-sign"></i>
+                        Eliminar
+                    </button></td>
+                        </tr>
+                        <td>Precio total de compra: {{calculoTotal() | currency: '€'}}</td>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+

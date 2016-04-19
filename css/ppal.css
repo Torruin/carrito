@@ -1,0 +1,130 @@
+header {
+    background-color: brown;
+}
+
+h1{
+    background-color: brown;
+    text-align: center;
+    font-size: 200px;
+    font-family: serif;
+    font-style: italic;
+    color: white;
+}
+
+footer {
+    color:blue;
+    font-size: 0.7em;
+}
+
+thead tr {
+    font-family: monospace;
+    color: blue;
+}
+
+tbody tr:nth-child(2n+1) {
+    background-color: bisque;
+}
+
+body{
+   
+}
+
+
+#producto{
+	width: 200px; height: 150px;
+}
+
+#carrito {
+  position: fixed;
+  bottom: 0;
+    right: 0;
+    color: brown;
+    text-align: center;
+    
+}
+
+#logo {
+    width: 158px;
+    height: 150px;
+    position:absolute;
+    right: 15px;
+    top: 55px;      
+}
+
+#mario {
+    width: 158px;
+    height: 150px;
+    position:absolute;
+    right: 315px;
+    top: 420px;
+    
+    
+        
+}
+
+
+#luigi {
+    width: 158px;
+    height: 150px;
+    position:absolute;
+    right: 315px;
+    top: 910px;
+    
+    
+        
+}
+
+#peach {
+    width: 158px;
+    height: 150px;
+    position:absolute;
+    right: 315px;
+    top: 660px;
+    
+    
+        
+}
+
+#toad {
+    width: 158px;
+    height: 150px;
+    position:absolute;
+    right: 315px;
+    top: 1160px;
+    
+    
+        
+}
+#bowser {
+    width: 158px;
+    height: 150px;
+    position:absolute;
+    right: 315px;
+    top: 1410px;
+    
+    
+        
+}
+#yoshi {
+    width: 158px;
+    height: 150px;
+    position:absolute;
+    right: 315px;
+    top: 1650px;
+    
+    
+        
+}
+#fatTony{
+    width: 158px;
+    height: 150px;
+    position:absolute;
+    right: 315px;
+    top: 238px;
+    
+    
+        
+}
+
+
+

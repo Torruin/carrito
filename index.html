@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Luigi's Pizza</title>
+    <meta name="description" content="Plantilla básica con ejemplo para AngularJS, Lab Ing Sw, ETSIT UPCT">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" sizes="32x32" href="/angular/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/angular/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/angular/favicon-16x16.png">
+
+    <link rel="stylesheet" href="libs/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/ppal.css">
+    
+     
+    
+  </head>
+  
+  <body ng-app="labIS">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+   
+    <p><h1>Luigi's Pizza</h1></p>
+    
+    <header>
+      
+      
+      <div class="cabecera">
+           <div class="letras">
+       
+            <img id="logo" src="images/Luigi_Risotto.png" alt="luigi" class="img-rounded">
+            <img id="mario" src="images/Mario-Icon2.png" alt="mario" class="img-rounded">
+            <img id="luigi" src="images/Luigi-Icon.png" alt="luigiB" class="img-rounded">
+            <img id="peach" src="images/Peach_Icon.png" alt="peach" class="img-rounded">
+            <img id="toad" src="images/Toad_Icon.png" alt="toad" class="img-rounded">
+            <img id="bowser" src="images/Bowser_Icon.png" alt="bowser" class="img-rounded">
+            <img id="yoshi" src="images/Yoshi_Icon.png" alt="yoshi" class="img-rounded">
+           
+
+        
+           </div>
+   
+         </div>
+      
+      
+    </header>
+    
+   
+
+    <main ng-view=""></main>
+
+    <footer>
+        <h3></h3>
+    </footer>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+<!--   Librería básicas: Angular -->
+    <script src="libs/js/angular.js"></script>
+    <script src="libs/js/angular-animate.js"></script>
+    <script src="libs/js/angular-cookies.js"></script>
+    <script src="libs/js/angular-resource.js"></script>
+    <script src="libs/js/angular-route.js"></script>
+    <script src="libs/js/angular-sanitize.js"></script>
+    <script src="libs/js/angular-touch.js"></script>
+
+
+        <!-- Controladores y resto elementos Angular de la aplicación -->
+        <script src="app.js"></script>
+        <script src="views/main/mainCtrl.js"></script>
+</body>
+</html>
